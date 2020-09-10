@@ -15,15 +15,8 @@ install:
   - sudo apt install curl
   - npm install -g newman
 
-addons:
-  sonarcloud:
-    organization: $SONAR_USER
-    token: $SONAR_TOKEN
-
 jobs:
   include:
-    - stage: continousIntegration
-      script: ./gradlew sonarqube
     - stage: continousDelivery
       deploy:
         provider: heroku
