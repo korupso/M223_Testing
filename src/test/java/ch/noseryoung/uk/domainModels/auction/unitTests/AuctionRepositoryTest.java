@@ -48,6 +48,8 @@ class AuctionRepositoryTest {
         Assertions.assertThat(auctionRepository.findAll().size()).isEqualTo(2);
         Assertions.assertThat((auctionRepository.findAll()).get(0).getName()).isEqualTo("Dennis");
 
+        Assertions.assertThat(2).isEqualTo(1 + 1);
+
     }
 
     @AfterEach
